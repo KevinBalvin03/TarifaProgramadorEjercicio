@@ -1,8 +1,12 @@
 package org.example;
 
+import java.time.LocalDate;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new scanner(system);
+
+        Scanner sc = new Scanner(System.in);
 
         // Información general
         String nombreProgramador, correo, ciudad, pais, tipoContrato, nivelExperiencia, cliente1, cliente2, cliente3;
@@ -10,19 +14,19 @@ public class Main {
         double tarifaBase, tarifaNivel, tarifaExperiencia;
 
         // Entrada de información general
-        System.out.print"Ingrese el nombre del programador: ");
-        nombreProgramador = sc.nextline()
+        System.out.print("Ingrese el nombre del programador: ");
+        nombreProgramador = sc.nextLine();
 
-        System.out.print("Ingrese el correo electrónico: ")
-        correo = scanner.nextLine();
+        System.out.print("Ingrese el correo electrónico: ");
+        correo = sc.nextLine();
 
         System.out.print("Ingrese la ciudad: ");
-        ciudad = leer.nextLine();
+        ciudad = sc.nextLine();
 
-        System.out.print("Ingrese el país: ")
+        System.out.print("Ingrese el país: ");
         pais = sc.nextLine();
 
-        System.out.print("Ingrese el tipo de contrato (Fulltime/Parttime/Freelance): ")
+        System.out.print("Ingrese el tipo de contrato (Fulltime/Parttime/Freelance): ");
         tipoContrato = sc.nextLine();
 
         System.out.print("Ingrese el nivel de experiencia (Junior/Senior): ");
@@ -35,22 +39,22 @@ public class Main {
         aniosExperiencia = sc.nextInt();
 
         // Ajuste de tarifa según experiencia
-        tarifaBase = 50,0,0; // base por hora
+        tarifaBase = 50.00; // base por hora
         tarifaNivel = (nivelExperiencia.equalsIgnoreCase("Senior")) ? 20 : 0;
         tarifaExperiencia = aniosExperiencia * 1.5;
         double tarifaHoraFinal = tarifaBase + tarifaNivel + tarifaExperiencia;
 
-        System.out.println("\nTarifa final por hora calculada: $" + tarifaHoraFinal)
+        System.out.println("\nTarifa final por hora calculada: $" + tarifaHoraFinal);
 
         // Información de proyectos
         System.out.println("\nIngrese los nombres de los 3 clientes:");
         sc.nextLine(); // limpiar buffer
-        System.out.print("Cliente 1: ")
-        cliente1 = sc.nex();
-        System.out.print("Cliente 2: ")
-        cliente2 = sc.next();
-        System.out.print("Cliente 3: ")
-        cliente3 = sc.nex();
+        System.out.print("Cliente 1: ");
+        cliente1 = sc.nextLine();
+        System.out.print("Cliente 2: ");
+        cliente2 = sc.nextLine();
+        System.out.print("Cliente 3: ");
+        cliente3 = sc.nextLine();
 
         int horasProyecto1, horasProyecto2, horasProyecto3;
         double bonusCliente1, bonusCliente2, bonusCliente3;
@@ -59,26 +63,26 @@ public class Main {
 
         // Captura de horas
         System.out.print("Horas trabajadas para " + cliente1 + ": ");
-        //horasProyecto1 = sc.nextInt();
+        horasProyecto1 = sc.nextInt();
         System.out.print("Bono adicional para " + cliente1 + ": ");
         bonusCliente1 = sc.nextDouble();
 
         System.out.print("Horas trabajadas para " + cliente2 + ": ");
-        //horasProyecto2 = sc.nextInt();
+        horasProyecto2 = sc.nextInt();
         System.out.print("Bono adicional para " + cliente2 + ": ");
         bonusCliente2 = sc.nextDouble();
 
         System.out.print("Horas trabajadas para " + cliente3 + ": ");
-        //horasProyecto3 = sc.nextInt();
+        horasProyecto3 = sc.nextInt();
         System.out.print("Bono adicional para " + cliente3 + ": ");
         bonusCliente3 = sc.nextDouble();
 
         // Cálculos de pago por proyecto
-        pagoProyecto1 = (horasProyec1 * tarifaHoraFinal) + bonusCliene1;
-        pagoProyecto2 = (horasProyecto2 * tarifaHoraFnal) + bonusCliene2;
-        pagoProyecto3 = (horasProyecto3 * tarifaHoraFinal) + bonusCliene3;
+        pagoProyecto1 = (horasProyecto1 * tarifaHoraFinal) + bonusCliente1;
+        pagoProyecto2 = (horasProyecto2 * tarifaHoraFinal) + bonusCliente2;
+        pagoProyecto3 = (horasProyecto3 * tarifaHoraFinal) + bonusCliente3;
 
-        subtotal ==== pagoProyecto1 + pagoProyecto2 + pagoProyecto3;
+        subtotal = pagoProyecto1 + pagoProyecto2 + pagoProyecto3;
 
         // Operaciones adicionales
         descuentos = subtotal * 0.03; // 3% de fondo de ahorro
